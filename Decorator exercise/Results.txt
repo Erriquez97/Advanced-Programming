@@ -1,0 +1,32 @@
+Name function:just_wait
+args:(10,)
+n_threads:1
+seq_iter:1
+iter:16
+mean:1.00626255
+variance:2.4936668422668296e-05
+
+Name function:just_wait
+args:(10,)
+n_threads:2
+seq_iter:1
+iter:8
+mean:1.0056936875
+variance:1.5788097381250635e-05
+
+Name function:just_wait
+args:(10,)
+n_threads:4
+seq_iter:1
+iter:4
+mean:1.0084997749999998
+variance:2.2587084389163564e-05
+
+Name function:just_wait
+args:(10,)
+n_threads:8
+seq_iter:1
+iter:2
+mean:1.00648215
+variance:5.0848605001101015e-08
+
