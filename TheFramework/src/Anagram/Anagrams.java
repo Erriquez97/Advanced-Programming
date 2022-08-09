@@ -18,9 +18,9 @@ public class Anagrams extends AJob {
     }
 
 
-    /*hot spot function overridden by Anagram class that read a file and takes only the strings in this file that have
-     length at least 4 chars and it contains only alphanumeric characters. Then for each of these string creates a new pair
-     made by the string with characters sorted and the string as it was*/
+    /*hot spot function overridden by Anagram class that reads a file and takes only the strings in this file that have
+     length at least 4 chars and it contains only alphanumeric characters. Then for each of these strings, it creates a new pair
+     consisting of the string with characters sorted and the string as it was*/
     @Override
     public Stream<Pair<String, String>> execute() {
         try {
@@ -36,7 +36,7 @@ public class Anagrams extends AJob {
         return null;
     }
 
-    // function that return true if the word taken in input has only alphanumeric characters, otherwise return false
+    // function that returns true if the word taken in input has only alphanumeric characters, otherwise returns false
     private boolean isAlphanumeric(String word) {
         char[] charArray = word.toCharArray();
         for (char c : charArray) {
@@ -46,7 +46,7 @@ public class Anagrams extends AJob {
         return true;
     }
 
-    // function that takes in input a string and return the string with the letters sorted
+    // function that takes in input a string and returns the string with the letters sorted
     private String ciao(String word) {
         return Stream.of(word.split(""))
                 .sorted()

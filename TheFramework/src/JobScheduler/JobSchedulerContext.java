@@ -12,20 +12,21 @@ public class JobSchedulerContext<K, V> {
         this.jobStrategy= jobStrategy;
     }
 
-    /* function that computes the Ajob's execute method and it takes in input a stream<Ajob<K,V>> from the emit and returns
-     a Stream<Pair<K,V>> */
+    /* Function that takes in input a stream<Ajob<K,V>> from the emit, it computes the Ajob's execute method on each stream
+     and returns a Stream<Pair<K,V>> */
     public Stream<Pair<K, V>> compute(Stream<AJob<K, V>> jobs) {
         return jobs.flatMap(AJob::execute);
     }
 
-    // DA VEDERE CHE COSA FA
+    //Function that takes in input a Stream of pair(K,V) and group the pairs with the same key, so now there are pairs formed
+    // by the key and the list of values
     public Stream<Pair<K, List<V>>> collect(Stream<Pair<K, V>> jobs) {
         return jobs
                 .collect(Collectors.groupingBy(Pair::getKey, Collectors.mapping(Pair::getValue, Collectors.toList())))
                 .entrySet().stream().map(x -> new Pair(x.getKey(), x.getValue()));
     }
 
-    //DA VEDERE COME FUNZIONE
+
     public void main() {
         jobStrategy.output(collect(compute(jobStrategy.emit())));
 
