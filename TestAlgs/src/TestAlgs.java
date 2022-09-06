@@ -65,7 +65,7 @@ public class TestAlgs {
         return null;
     }
 
-    /* function that check for each class in the folder "algos" if that class has: a constructor that takes a String as a parameter,
+    /* function that checks for each class in the folder "algos" if that class has: a constructor that takes a String as a parameter,
        a method that starts with "enc" and a method that starts with "dec".
        If the class has the 3 conditions listed before then it will be created an instance of the class passing as
        parameter the key saved in the registry corresponding that class.

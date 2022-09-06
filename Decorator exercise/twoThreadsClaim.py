@@ -72,7 +72,7 @@ def test(iter, fun, *args):
 # it cleans the file txt in case something is written
 open('Results.txt', 'w').close()
 
-test(2, just_wait, 10 )
+test(2, just_wait, 1 )
 
 
 # It has been executed the function grezzo and the function just_wait on a machine equipped with an

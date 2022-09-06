@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TTTController">
+    <output-path>$PROJECT_DIR$/out/artifacts/TTTController</output-path>
+    <root id="archive" name="TTTController.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/TTTCMan/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/out/production/TicTacToe/com/TicTacToe/Beans/TTTController.class" />
+    </root>
+  </artifact>
+</component>
