@@ -100,7 +100,6 @@ public class TTTBoard extends JFrame implements PropertyChangeListener {
                     this.setRowWinning("O", 1);
                 }
                 if (this.checkTrisHorizontal() == 2) {
-                    System.out.println("entra");
                     this.setRowWinning("O", 2);
                 }
                 if (this.checkTrisVertical() == 0) {
@@ -188,13 +187,13 @@ public class TTTBoard extends JFrame implements PropertyChangeListener {
 
     // it resets all the values needed to restart a new match
     public void reset() {
+        this.winner = false;
+        this.controller.setInitialGame(true);
+        this.controller.setFont(new Font("Cambria Math", Font.PLAIN, 25));
+        this.controller.setText("START GAME");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 try {
-                    this.winner = false;
-                    this.controller.setInitialGame(true);
-                    this.controller.setFont(new Font("Cambria Math", Font.PLAIN, 25));
-                    this.controller.setText("START GAME");
                     cells[i][j].setState("Initial");
                     cells[i][j].getButtonX().setEnabled(true);
                     cells[i][j].getButtonO().setEnabled(true);

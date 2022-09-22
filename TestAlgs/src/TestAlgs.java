@@ -97,10 +97,9 @@ public class TestAlgs {
                     String secretKey;
                     File secrefile = new File(String.valueOf(path + PATH_SECRET_LIST));
                     Scanner scanner = new Scanner(secrefile);
+                    Object algorithm = constructor.newInstance(key);
                     while (scanner.hasNext()) {
                         secretKey = scanner.nextLine();
-
-                        Object algorithm = constructor.newInstance(key);
                         String encwrd = (String) encMethod.invoke(algorithm, secretKey);
                         String decwrd = (String) decMethod.invoke(algorithm, encwrd);
                         if (!decwrd.substring(0, secretKey.length()).equals(secretKey) &&

@@ -78,8 +78,7 @@ test(2, just_wait, 1 )
 # It has been executed the function grezzo and the function just_wait on a machine equipped with an
 # AMD Ryzen AMD Ryzen 7 5800HS with 8 cores and 16 threads and the results are the following:
 
-# On grezzo function the time of execution doubles increasing the number of threads, more preciseley passing to
-# the function grezzo the argument 22 the results are the following:
+# Grezzo function:
 
 # n_threads:1	iter:16 average execution time: 0.89180745
 # n_threads:2	iter:8  average execution time:	0.7789035000000002
@@ -93,8 +92,7 @@ test(2, just_wait, 1 )
 # a single thread calling the function twice." is false because it's true that in the case of CPU bound operations there is not an improvment of
 # performance but it's not true that there is so much difference in time of execution increasing the threads. 
 
-# On just wait function the execution's time remain stable indipendently by the number of threads used,
-# more precisely, passing 10 like argument to the function just_wait, the results are the following:
+# Just wait function:
 
 # n_threads:1	iter:16 average execution time: 16.17817615
 # n_threads:2	iter:8  average execution time:	8.07899605
